@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Input\Ivanov_02012022.csv" />
+    <None Remove="Resources\Input\Ivanov_04012022.csv" />
+    <None Remove="Resources\Input\Sidorov_02012022.csv" />
+    <None Remove="Resources\Input\Sidorov_03012022.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Input\Ivanov_02012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Ivanov_04012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Sidorov_03012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Sidorov_02012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46521.71" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpecialCaseLogick\SpecialCaseLogick.csproj" />
+  </ItemGroup>
+
+</Project>

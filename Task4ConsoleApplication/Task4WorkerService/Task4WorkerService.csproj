@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-Task4WorkerService-83805092-F893-4CD0-9182-4B73F8CE39AB</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Input\Ivanov_02012022.csv" />
+    <None Remove="Resources\Input\Ivanov_04012022.csv" />
+    <None Remove="Resources\Input\Sidorov_02012022.csv" />
+    <None Remove="Resources\Input\Sidorov_03012022.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Input\Ivanov_02012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Ivanov_04012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Sidorov_02012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Input\Sidorov_03012022.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.46521.71" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\Logick\Logick.csproj" />
+    <ProjectReference Include="..\SpecialCaseLogick\SpecialCaseLogick.csproj" />
+  </ItemGroup>
+</Project>
